@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,18 +9,53 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: #1a1f2b;
+    background-color: var(--Donkerblauw);
+    font-family: Poppins;
+}
+
+:root {
+    --Donkerblauw: #1a1f2b;
+    --Rood: #f63f63
 }
 
 
 #logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 3.5s;
-    height: 200px;
     width: 300px;
+    animation: fill 0.5s ease forwards 3.5s;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    align-items: center;
+    justify-content: center;    
+}
+
+.buttons {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.time {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 
@@ -70,17 +107,58 @@ body {
     animation: line-animation 2s ease forwards 2.2s;
 }
 
+#logo path:nth-child(8) {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+    animation: line-animation 2s ease forwards 2.2s;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+    animation: line-animation 2s ease forwards 2.2s;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+    animation: line-animation 2s ease forwards 2.2s;
+}
+
+
+
 @keyframes line-animation {
     to {
         stroke-dashoffset: 0;
+        stroke: #fc602b;
     }
 }
 
 @keyframes fill {
     from {
-        fill: transparent
+        fill: transparent;
     }
     to {
-        fill: white;
+        fill: #fc602b
+    }
+}
+
+@keyframes rotation {
+    0% {-webkit-transform: rotate(0deg);}
+    12.5%, 25% {-webkit-transform: rotate(90deg);} 
+    37.5%, 50% {-webkit-transform: rotate(180deg);} 
+    62.5%, 75% {-webkit-transform: rotate(270deg);} 
+    87.5%, 100% {-webkit-transform: rotate(360deg);}
+}
+
+
+@media screen and (min-width: 768px) {
+    #logo {
+        width: 625px;
+        height: 155px;
+    }
+
+    .button {
+        width: 200px;
     }
 }
