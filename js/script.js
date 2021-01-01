@@ -14,12 +14,12 @@ function getTime () {
 
     if (curr_sec < 10) {
         curr_sec = `0${curr_sec}`
-    } else if ( curr_min < 10) {
+    } 
+    if ( curr_min < 10) {
         curr_min = `0${curr_min}`
-    } else if (curr_hour < 10 ){
+    } 
+    if (curr_hour < 10 ){
         curr_hour = `0${curr_hour}`
-    } else {
-        // Nothing here :D
     }
 
     paragraph.innerHTML = `${curr_hour}:${curr_min}:${curr_sec}`
